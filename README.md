@@ -45,3 +45,13 @@ python main.py
 
 # hit space or any key when you are done viewing the image
 ```
+
+## To run on a video
+
+```shell
+python video.py
+
+# Or, if you want to parallelize the processing, run:
+
+python paralell_video.py
+```
