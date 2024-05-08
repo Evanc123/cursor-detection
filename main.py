@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 
 
+# Below works for one screenshot / template pair
 def multi_scale_template_matching(screenshot_path, template_path):
     img = cv2.imread(screenshot_path)
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -45,10 +46,8 @@ def multi_scale_template_matching(screenshot_path, template_path):
 #     "screenshots/templates/apple_mouse_default_pointer_template.png",
 # )
 
-import cv2
-import numpy as np
 
-
+# the more general version
 def detect_apple_mouse(screenshot_path, template_paths):
     # Load the screenshot
     img = cv2.imread(screenshot_path)
