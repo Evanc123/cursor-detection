@@ -35,7 +35,7 @@ uv pip install -r requirements.txt
 
 # run the thing
 
-uv python main.py
+python main.py
 
 # hit space or any key when you are done viewing the image
 ```
