@@ -82,7 +82,7 @@ def detect_apple_mouse_in_video(video_path, template_paths, output_video_path):
     total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     fourcc = cv2.VideoWriter_fourcc(*"mp4v")
 
-    num_chunks = 8
+    num_chunks = 16
     frames_per_chunk = total_frames // num_chunks
     chunk_paths = [f"{output_video_path}_chunk_{i}.mp4" for i in range(num_chunks)]
 
