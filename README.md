@@ -4,6 +4,8 @@
 
 Implements a basic multi-scale cursor detection using openCV.
 
+<img width="659" alt="image" src="https://github.com/Evanc123/mouse-detection/assets/4010547/e2eb6f01-9c43-4c80-934c-f2a019ef06aa">
+
 ## Features:
 
 1. Works across multiple scales.
