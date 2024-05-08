@@ -15,7 +15,6 @@ Implements a basic multi-scale cursor detection using openCV.
 
 1. May not function effectively on non-white backgrounds, though conversion to grayscale could mitigate this issue (results may vary).
 2. Performance is significantly slow.
-   To Run:
 
 ## Installation
 
