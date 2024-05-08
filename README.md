@@ -55,3 +55,4 @@ python video.py
 
 python paralell_video.py
 ```
+My m2 does a 7 second 2.5k video @ 30 fps in about 8 minutes using the parallelized script
