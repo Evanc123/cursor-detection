@@ -11,6 +11,11 @@ Implements a basic multi-scale cursor detection using openCV.
 
 <img width="659" alt="image" src="https://github.com/Evanc123/mouse-detection/assets/4010547/e2eb6f01-9c43-4c80-934c-f2a019ef06aa">
 
+
+
+https://github.com/Evanc123/cursor-detection/assets/4010547/ac6b71ac-fb13-4341-be9a-135b878c1724
+
+
 ## Limitations:
 
 1. May not function effectively on non-white backgrounds, though conversion to grayscale could mitigate this issue (results may vary).
@@ -25,6 +30,10 @@ Install using `uv` and run using `python`.
 #If you haven't installed UV yet, run the following command:
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+# create a venv with uv
+
+uv venv
+
 # activate venv
 
 source .venv/bin/activate
@@ -35,7 +44,7 @@ uv pip install -r requirements.txt
 
 # run the thing
 
-uv python main.py
+python main.py
 
 # hit space or any key when you are done viewing the image
 ```
