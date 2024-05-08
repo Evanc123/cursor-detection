@@ -1,6 +1,6 @@
 # Basic Cursor Detector (BCD)
 
-[![bcd](https://img.shields.io/badge/bcd-version_1)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![bcd](https://img.shields.io/badge/bcd-v0.1-blue)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 Implements a basic multi-scale cursor detection using openCV.
 
