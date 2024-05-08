@@ -1,10 +1,15 @@
+# Basic Cursor Detector (BCD)
+
+[![bcd](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/Evanc123/mouse-detection)
+
 Implements a basic multi-scale cursor detection using openCV.
 
-Features:
+## Features:
 
 1. Works across multiple scales.
+2. Works!
 
-Limitations:
+## Limitations:
 
 1. May not function effectively on non-white backgrounds, though conversion to grayscale could mitigate this issue (results may vary).
 2. Performance is significantly slow.
@@ -12,20 +17,24 @@ Limitations:
 
 ## Installation
 
-If you haven't installed UV yet, run the following command:
+Install using `uv` and run using `python`.
 
-`curl -LsSf https://astral.sh/uv/install.sh | sh`
+```shell
 
-activate venv
+#If you haven't installed UV yet, run the following command:
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-`source .venv/bin/activate`
+# activate venv
 
-install reqs (just opencv)
+source .venv/bin/activate
 
-`uv pip install -r requirements.txt`
+# install reqs (just opencv)
 
-run the thing
+uv pip install -r requirements.txt
 
-`uv python main.py`
+# run the thing
 
-hit space or any key when you are done viewing the image
+uv python main.py
+
+# hit space or any key when you are done viewing the image
+```
