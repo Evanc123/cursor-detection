@@ -6,7 +6,7 @@ Implements a basic multi-scale cursor detection using openCV.
 ## Features:
 
 1. Works across multiple scales.
-2. Works! (see below)
+2. Works (at all!) (see below)
 
 <img width="659" alt="image" src="https://github.com/Evanc123/mouse-detection/assets/4010547/e2eb6f01-9c43-4c80-934c-f2a019ef06aa">
 
@@ -14,7 +14,7 @@ Implements a basic multi-scale cursor detection using openCV.
 ## Limitations:
 
 1. May not function effectively on non-white backgrounds, though conversion to grayscale could mitigate this issue (results may vary).
-2. Performance is significantly slow.
+2. Performance is fucked
 
 ## Installation
 
