@@ -23,6 +23,7 @@ def process_chunk(args):
     cap.set(cv2.CAP_PROP_POS_FRAMES, start_frame)
     out = cv2.VideoWriter(output_chunk_path, fourcc, fps, (frame_width, frame_height))
 
+    frame_number = 0
     while cap.get(cv2.CAP_PROP_POS_FRAMES) <= end_frame:
         ret, img = cap.read()
         if not ret:
@@ -58,11 +59,12 @@ def process_chunk(args):
             top_left = best_loc
             bottom_right = (top_left[0] + best_w, top_left[1] + best_h)
             cv2.rectangle(img, top_left, bottom_right, (0, 255, 0), 2)
-            print(
-                f"For worker: {start_frame} to {end_frame} Match found with value: {match[0]}"
-            )
 
         out.write(img)
+        frame_number += 1
+        print(
+            f"Processed {frame_number} / {end_frame - start_frame} frames from {start_frame} to {end_frame}, with match count: {len(best_matches)}"
+        )
 
     cap.release()
     out.release()
