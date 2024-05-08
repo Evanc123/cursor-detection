@@ -1,28 +1,31 @@
-Implements very rudimentary multi-scale cursor detection using openCV
+Implements a basic multi-scale cursor detection using openCV.
 
-features:
+Features:
 
-1. works for multiple scales
+1. Works across multiple scales.
 
-limitations:
+Limitations:
 
-1. probably doesn't work for non white backgrounds (although it goes grayscale so maybe its fine, YMMV)
-2. slow as shit (like really slow)
+1. May not function effectively on non-white backgrounds, though conversion to grayscale could mitigate this issue (results may vary).
+2. Performance is significantly slow.
+   To Run:
 
-To Run:
+## Installation
 
-# install uv if you haven't (if you haven't wut r u doing)
+If you haven't installed UV yet, run the following command:
 
 `curl -LsSf https://astral.sh/uv/install.sh | sh`
 
-# activate venv
+activate venv
 
 `source .venv/bin/activate`
 
-# install reqs (just opencv)
+install reqs (just opencv)
 
 `uv pip install -r requirements.txt`
 
-# run the thing
+run the thing
 
 `uv python main.py`
+
+hit space or any key when you are done viewing the image
