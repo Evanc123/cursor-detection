@@ -1,7 +1,8 @@
 # Basic Cursor Detector (BCD)
 
-Implements a basic multi-scale cursor detection using openCV.
+[![bcd](https://img.shields.io/badge/any_text-you_like-blue)](https://github.com/Evanc123/mouse-detection)
 
+Implements a basic multi-scale cursor detection using openCV.
 
 ## Features:
 
@@ -9,7 +10,6 @@ Implements a basic multi-scale cursor detection using openCV.
 2. Works (at all!) (see below)
 
 <img width="659" alt="image" src="https://github.com/Evanc123/mouse-detection/assets/4010547/e2eb6f01-9c43-4c80-934c-f2a019ef06aa">
-
 
 ## Limitations:
 
