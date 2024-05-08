@@ -25,6 +25,10 @@ Install using `uv` and run using `python`.
 #If you haven't installed UV yet, run the following command:
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+# create a venv with uv
+
+uv venv
+
 # activate venv
 
 source .venv/bin/activate
