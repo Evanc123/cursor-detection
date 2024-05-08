@@ -51,8 +51,9 @@ python main.py
 ```shell
 python video.py
 
-# Or, if you want to parallelize the processing, run:
+# Or, if you want to parallelize the processing, 
 
+# this has a dependency on FFMPEG - if you don't have it installed on your machine, install it
 python paralell_video.py
 ```
 My m2 does a 7 second 2.5k video @ 30 fps in about 8 minutes using the parallelized script
