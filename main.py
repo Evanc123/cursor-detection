@@ -66,12 +66,23 @@ def detect_apple_mouse(screenshot_path, template_paths):
             resized_template = cv2.resize(
                 template, (int(w * scale), int(h * scale)), interpolation=cv2.INTER_AREA
             )
+            channels = cv2.split(resized_template)
+            zero_channel = np.zeros_like(channels[0])
+            mask = np.array(channels[3])
+            mask[channels[3] == 0] = 1
+            mask[channels[3] == 100] = 0
+            transparent_mask = cv2.merge(
+                [zero_channel, zero_channel, zero_channel, mask]
+            )
+
             # Perform template matching
-            res = cv2.matchTemplate(img_gray, resized_template, cv2.TM_CCOEFF_NORMED)
+            res = cv2.matchTemplate(
+                img_gray, resized_template, cv2.TM_SQDIFF, mask=transparent_mask
+            )
             min_val, max_val_temp, min_loc, max_loc_temp = cv2.minMaxLoc(res)
 
             # Store the best match for this template and scale
-            if max_val_temp > 0.8:  # Consider matches above a certain threshold
+            if max_val_temp > 0.2:  # Consider matches above a certain threshold
                 best_matches.append(
                     (max_val_temp, max_loc_temp, int(w * scale), int(h * scale))
                 )
@@ -97,9 +108,10 @@ def detect_apple_mouse(screenshot_path, template_paths):
 
 # Example usage
 template_paths = [
-    "screenshots/templates/apple_hand_template.png",
-    "screenshots/templates/apple_mouse_default_pointer_template.png",
-    "screenshots/templates/apple_text_selection_template.png",
+    # "screenshots/templates/apple_hand_template.png",
+    # "screenshots/templates/apple_mouse_default_pointer_template.png",
+    # "screenshots/templates/apple_text_selection_template.png",
+    "screenshots/templates/image_with_black_background.png",
 ]
 
 testers = [
